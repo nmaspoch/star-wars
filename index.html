@@ -1,16 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
     <script defer src="script.js"></script>
     <title>Star Wars</title>
 </head>
-<body>
-    <button onclick="getFilm(1)">Get ANH</button>
-    <button onclick="getFilm(2)">Get TESB</button>
-    <button onclick="getFilm(3)">Get ROTJ</button>
-    <h1 id="film"></h1>
-    <p id="description"></p>
+
+<body onload="loadFilm()">
+    <div class="container">
+        <h1>Films</h1>
+        <main>
+            <div onclick="previous()" class="fancy-link">Previous</div>
+            <img id="poster" src="">
+            <aside>
+                <h2 id="title"></h2>
+                <p id="director"></p>
+                <p id="release"></p>
+                <p id="crawl"></p>
+            </aside>
+            <div onclick="next()" class="fancy-link">Next</div>
+        </main>
+    </div>
 </body>
+
 </html>
