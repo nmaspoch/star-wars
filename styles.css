@@ -38,7 +38,7 @@ main {
     height: 150px;
     list-style-type: none;
     position: absolute;
-    bottom: -5%;
+    top: 80%;
     transform: translateY(-50%);
     z-index: 1;
     background-position: 80%;
