@@ -14,10 +14,16 @@
 </head>
 
 <body onload="onLoad()">
+    <header>
+        <nav id="nav">
+            <ul>
+                <li><a href="javascript:loadSection('films');">Films</a></li>
+                <li><a href="javascript:loadSection('characters');">People</a></li>
+            </ul>
+        </nav>
+    </header>
     <main>
-        <ul id="slider">
-        </ul>
-        <nav>
+        <nav id="toggleCarousel">
             <ion-icon class="btn prev" name="arrow-back-outline"></ion-icon>
             <ion-icon class="btn next" name="arrow-forward-outline"></ion-icon>
         </nav>
