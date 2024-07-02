@@ -149,6 +149,7 @@ function loadSection(section) {
     return;
   } else {
     clearDOM();
+    toggleLoader(true);
     currentSection = section;
 
     if (section === "films") {
@@ -158,6 +159,7 @@ function loadSection(section) {
       document.removeEventListener("click", activateFilms);
       generateCharacters(charactersData);
     }
+    toggleLoader(false);
   }
 }
 
@@ -231,4 +233,16 @@ function setCharacter(index) {
 function clearDOM() {
   const pageContainer = document.getElementById("page-container");
   pageContainer.remove();
+}
+
+function toggleLoader(isLoading)
+{
+  if (isLoading)
+    {
+      document.querySelector("#loader").style.visibility = "visible";
+    }
+    else
+    {
+      document.querySelector("#loader").style.visibility = "hidden";
+    }
 }
